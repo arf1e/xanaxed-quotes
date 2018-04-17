@@ -1,0 +1,26 @@
+{
+  "name": "xanaxed-quotes",
+  "version": "1.0.0",
+  "description": "technically correct quotes (on xanax)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electricSemyon/xanaxed-quotes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/electricSemyon/xanaxed-quotes/issues"
+  },
+  "homepage": "https://github.com/electricSemyon/xanaxed-quotes#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.15",
+    "pug": "^2.0.3"
+  }
+}
