@@ -1,36 +1,97 @@
 html {
   font-family: 'Lobster', serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #99ced3;
+  background-image: url(../img/pavel.png);
+  background-size: 80px 80px;
+  min-width: 320px;
 }
 
 .app {
-  width: 320px;
+  width: 300px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  padding: 0 10px 0 10px;
 }
-
 
 .moods {
   display: flex;
   flex-direction: column;
-
 }
 
 .mood__image {
   width: 50px;
   height: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
 }
 
 .mood {
   height: 70px;
-  background-color: #f74cae;
-  margin: 5px 0 5px 0;
+  background-color: #ed85bf;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
+  justify-content: flex-end;
   text-decoration: none;
   color: white;
   align-items: center;
+  font-size: 24px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+
+.heading {
+  margin-bottom: 25vh;
+  background-color: #ed85bf;
+  text-align: center;
+  color: white;
+  -webkit-box-shadow: 0px 0px 85px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 85px -6px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 85px -6px rgba(0,0,0,0.75);
+}
+
+.heading__text {
+  color: white;
+}
+
+@media(min-width: 322px) {
+  .app {
+    width: 700px;
+  }
+
+  .moods {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .heading {
+    margin-bottom: 40vh;
+  }
+
+  .mood {
+    width: 340px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 0px 85px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 85px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 85px -6px rgba(0,0,0,0.75);
+    justify-content: center;
+  }
+
+  .mood__image {
+    margin: 0 10px 0 0;
+  }
+
+  body {
+    background-size: 150px 150px;
+  }
 }
 
