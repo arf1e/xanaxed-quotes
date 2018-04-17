@@ -14,3 +14,12 @@ exports.getQuote = async(req, res) => {
   // todo квот должен быть не массивом сука
   res.render('quotePage', { quote: quote[0].text.split('\n') })
 };
+
+exports.postQuote = async(req, res) => {
+  const {mood, text} = req.body;
+  const newQuote = new Quote({ mood, text });
+
+  await newQuote.save();
+
+  res.json('С нами Крым ебты!')
+};

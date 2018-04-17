@@ -1,0 +1,15 @@
+extends layout
+
+
+block content
+    main.app
+    form(action="/quote" method="POST")
+      p Текст:
+        input(type="text" name="text" placeholder="Введи текст сука")
+      p Настроение:
+        select(name="mood")
+          option(value='shitty') Грустный
+          option(value='happy') Счастливый
+          option(value='inspirational') Вдохновляющий
+          option(value='suicidal') Суицидальный
+      input(type="submit")
