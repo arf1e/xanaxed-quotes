@@ -1,24 +1,24 @@
-html
-  head
-    title xanaxed qoutes
-    link(rel='stylesheet', href='/public/css/homePage.css')
-  body
-    heading.heading-text
-      h1 Какой ты сегодня? (хуй соси)
+extends layout
 
-    div.moods
-      a(href='/quote/shitty')
-        span Грустный
-        img(src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f615.png')
 
-      a(href='/quote/happy')
-        span Счастливый
-        img(src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f60a.png')
+block content
+    main.app
+      heading.heading-text
+        h1 Какой ты сегодня? (хуй соси)
 
-      a(href='/quote/inspirational')
-        span Вдохновляющий
-        img(src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f389.png')
+      div.moods
+        a(href='/quote/shitty').mood
+          span.mood__title Грустный
+          img(src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f615.png').mood__image
 
-      a(href='/quote/suicidal')
-        span Суицидальный
-        img(src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png')
+        a(href='/quote/happy').mood
+          span.mood__title Счастливый
+          img(src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f60a.png').mood__image
+
+        a(href='/quote/inspirational').mood
+          span.mood__title Вдохновляющий
+          img(src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f389.png').mood__image
+
+        a(href='/quote/suicidal').mood
+          span.mood__title Суицидальный
+          img(src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png').mood__image
