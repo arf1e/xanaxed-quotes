@@ -115,3 +115,8 @@ body {
   font-size: 64px;
   color: #fff;
 }
+
+.quote-content__quote-text p {
+  line-height: 1;
+  margin: 0;
+}

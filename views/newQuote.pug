@@ -5,7 +5,7 @@ block content
     main.app
     form(action="/quote" method="POST")
       p Текст:
-        input(type="text" name="text" placeholder="Введи текст сука")
+        textarea(name="text" placeholder="Введи текст сука")
       p Настроение:
         select(name="mood")
           option(value='shitty') Грустный
