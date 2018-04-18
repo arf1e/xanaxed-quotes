@@ -113,10 +113,14 @@ body {
 
 .quote-content__quote-text {
   font-size: 64px;
+  line-height: 18px;
   color: #fff;
 }
 
-.quote-content__quote-text p {
-  line-height: 1;
-  margin: 0;
+.quote-content__paragraph {
+  background-color: #ed85bf;
+  line-height: 64px;
+  margin: 5px 0 5px 0;
+  transform: skewX(-10deg);
+  text-align: center;
 }
