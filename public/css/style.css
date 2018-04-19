@@ -138,3 +138,27 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+.user-block {
+  position: absolute;
+  left: 5%;
+  top: 15px;
+  font-size: 32px;
+}
+
+.user-block__btn {
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
+  opacity: 0.7;
+}
+
+.user-block__btn:hover {
+  opacity: 1;
+  border-bottom: 2px solid #99ced3;
+}
+
+.user-block__btn:active {
+  color: #ed85bf;
+  border-bottom-color: #ed85bf;
+}

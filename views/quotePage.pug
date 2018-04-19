@@ -12,7 +12,13 @@ block content
             each line in quote
               p.quote-content__paragraph= line
 
+        .user-block
+          a.user-block__btn(href="/") < На главную
+
   script(src='https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js')
   script.
     const scene = document.getElementById('scene');
-    const parallaxInstance = new Parallax(scene);
+    const parallaxInstance = new Parallax(scene, {
+      relativeInput: true,
+      pointerEvents: true
+    });
