@@ -11,9 +11,19 @@ block content
           div.quote-content__quote-text
             each line in quote
               p.quote-content__paragraph= line
+          div.social
+            script.
+              document.write(VK.Share.button(
+                {
+                  title: 'Ксанаксовые цитаты на каждый день'
+                },{
+                type: "custom", 
+                text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" class=\"social__vk\" /> "
+                }));
 
         .user-block
           a.user-block__btn(href="/") < На главную
+          
 
   script(src='https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js')
   script.
