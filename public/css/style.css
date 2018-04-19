@@ -101,26 +101,40 @@ body {
 }
 
 .quote-content-wrapper {
-  display: flex;
+  display: flex !important;
   width: 100vw;
   height: 100vh;
-  background: url(https://coubsecure-s.akamaihd.net/get/b176/p/coub/simple/cw_timeline_pic/45c3c58ae4a/d7f39b800d96cb2329f01/big_1501884001_image.jpg);
-  background-size: cover;
   align-items: center;
   justify-content: center;
-  background-position: 26% 50%;
 }
 
 .quote-content__quote-text {
   font-size: 64px;
   line-height: 18px;
   color: #fff;
+  background-color: #ed85bf;
+  transform: skewX(-10deg);
 }
 
 .quote-content__paragraph {
-  background-color: #ed85bf;
   line-height: 64px;
   margin: 5px 0 5px 0;
-  transform: skewX(-10deg);
   text-align: center;
+}
+
+.pavel-ebalo-background {
+  position: absolute;
+  top: -5vh !important;
+  left: -5vw !important;
+  width: 110vw;
+  height: 110vh;
+  background: url(https://coubsecure-s.akamaihd.net/get/b176/p/coub/simple/cw_timeline_pic/45c3c58ae4a/d7f39b800d96cb2329f01/big_1501884001_image.jpg);
+  background-size: cover;
+  background-position: 26% 50%;
+}
+
+.parallax-wrapper {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
