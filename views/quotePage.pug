@@ -12,18 +12,19 @@ block content
             each line in quote
               p.quote-content__paragraph= line
           div.social
+            a.twitter-share-button(href='https://twitter.com/intent/tweet?text=нужен%20ксанакс' data-size='large') Твитнуть
             script.
               document.write(VK.Share.button(
                 {
                   title: 'Ксанаксовые цитаты на каждый день'
                 },{
-                type: "custom", 
-                text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" class=\"social__vk\" /> "
+                  type: "custom",
+                  text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"28\" class=\"social__vk\" /> "
                 }));
 
         .user-block
           a.user-block__btn(href="/") < На главную
-          
+
 
   script(src='https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js')
   script.
@@ -32,3 +33,21 @@ block content
       relativeInput: true,
       pointerEvents: true
     });
+
+  script.
+    window.twttr = (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function (f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
