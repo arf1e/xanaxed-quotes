@@ -162,3 +162,10 @@ body {
   color: #ed85bf;
   border-bottom-color: #ed85bf;
 }
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  transform: skewX(-10deg);
+}
