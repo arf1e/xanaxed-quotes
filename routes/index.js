@@ -8,4 +8,6 @@ router.get('/quote/new', (req, res) => res.render('newQuote'));
 router.get('/quote/:mood', quoteController.getQuote);
 router.post('/quote', quoteController.postQuote);
 
+router.get('/quote/view/:id', quoteController.renderQuotePage);
+
 module.exports = router;
