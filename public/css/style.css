@@ -5,13 +5,9 @@ html, body {
 
 html {
   font-family: 'Lobster', serif;
-  padding: 0;
-  margin: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   background-color: #99ced3;
   background-image: url(../img/pavel.png);
   background-size: 80px 80px;
@@ -51,6 +47,21 @@ body {
   border-radius: 5px;
   margin-bottom: 5px;
   transform: skewX(-5deg);
+  transition: 0.2s;
+}
+
+.mood:hover {
+  background-color: #d660a2;
+}
+
+.mood:active {
+  background-color: #ce3b8d;
+  color: #f2d0e3;
+}
+
+.mood:hover .mood__image {
+  animation: rotate 0.6s infinite;
+  animation-timing-function: cubic-bezier(.6,.63,.72,.7);
 }
 
 
@@ -202,4 +213,16 @@ body {
 .twitter-share-button {
   margin-bottom: -10px;
   margin-right: 10px;
+}
+
+@keyframes rotate {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }    
+
 }
