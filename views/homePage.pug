@@ -4,7 +4,8 @@ extends layout
 block content
     main.app
       heading.heading
-        h1.heading__text Какой ты сегодня? (хуй соси)
+        h1.heading__text Какой ты сегодня?
+          span.trigger (хуй соси)
 
       div.moods
         a(href='/quote/shitty').mood
@@ -22,3 +23,24 @@ block content
         a(href='/quote/suicidal').mood
           span.mood__title Суицидальный
           img(src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png' width="70" height="70").mood__image
+
+      img(src='/public/img/pavel.png').flying-pavel
+
+      script.
+        const trigger = document.querySelector('.trigger');
+        const flyingPavel = document.querySelector('.flying-pavel');
+        const body = document.querySelector('body');
+        const pavelSound = new Audio('/public/audio/pavel.mp3');
+
+        trigger.addEventListener('click', e => {
+          flyingPavel.classList.add('flying-pavel--active');
+          body.style.overflow = 'hidden';
+
+          pavelSound.loop = false;
+          pavelSound.play();
+        });
+
+        flyingPavel.addEventListener('animationend', () => {
+          flyingPavel.classList.remove('flying-pavel--active');
+          body.style.overflow = 'auto';
+        })

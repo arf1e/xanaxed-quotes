@@ -104,6 +104,12 @@ body {
 }
 
 
+.flying-pavel {
+  display: none;
+  width: 350px;
+  height: 385px;
+}
+
 @media(min-width: 768px) {
   .app {
     width: 700px;
@@ -158,6 +164,11 @@ body {
     margin: 5px 0 5px 0;
     text-align: center;
     max-width: 740px;
+  }
+
+  .flying-pavel {
+    width: 700px;
+    height: 789px;
   }
 }
 
@@ -215,6 +226,13 @@ body {
   margin-right: 10px;
 }
 
+.flying-pavel--active {
+  display: block;
+  position: absolute;
+  animation: pavel-rotate 1s;
+  animation-timing-function: cubic-bezier(.6,.63,.72,.7);
+}
+
 @keyframes rotate {
 
   0% {
@@ -224,5 +242,19 @@ body {
   100% {
     transform: rotate(360deg);
   }    
+
+}
+
+@keyframes pavel-rotate {
+
+  0% {
+    transform: rotate(0deg);
+    left: -500px;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    left: calc(100% + 500px);
+  }
 
 }
