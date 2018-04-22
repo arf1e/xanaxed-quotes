@@ -14,7 +14,7 @@ require('./models/Quote');
 
 
 const app = require('./app');
-app.set('port', process.env.PORT);
+app.set('port', process.env.PORT || 80);
 const server = app.listen(app.get('port'), () => {
   console.log(`Сервер запущен → чудо нахуй: порт ${server.address().port} `);
 });
